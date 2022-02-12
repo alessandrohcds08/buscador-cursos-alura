@@ -45,6 +45,6 @@
   "scripts-descriptions": {
     "check": "Roda as verificacoes do codigo. PHAN,PHPCS,PHPUNIT"
   },
-  "license": "GL-3.0",
+  "proprietary": "GL-3.0",
   "bin": ["buscarcursos.php"]
 }
