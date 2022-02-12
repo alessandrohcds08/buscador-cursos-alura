@@ -22,6 +22,14 @@ class BuscadorCursos
         $this->crawler = $crawler;
     }
 
+
+
+
+
+
+
+
+    
     public function buscar(string $url): array
     {
         $respota = $this->httpClient->request('GET', $url);
