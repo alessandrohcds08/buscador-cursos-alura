@@ -21,14 +21,6 @@ class BuscadorCursos
         $this->httpClient = $httpClient;
         $this->crawler = $crawler;
     }
-
-
-
-
-
-
-
-
     
     public function buscar(string $url): array
     {
