@@ -1,0 +1,48 @@
+{
+  "name": "alessandro.souza/buscar-cursos",
+  "description": "Projeto que buscaos cursos no site alura",
+  "type": "library",
+  "authors": [
+    {
+      "name": "alessandro.souza",
+      "email": "alessandro.souza@voxline.com.br"
+    }
+  ],
+  "autoload": {
+    "classmap": [
+      "./Teste.php"
+    ],
+    "files": [
+      "./functions.php"
+    ],
+    "psr-4": {
+      "Alura\\BuscadorDeCursos\\": "src/"
+    }
+  },
+  "require": {
+    "guzzlehttp/guzzle": "^7.4",
+    "symfony/dom-crawler": "^4.2",
+    "symfony/css-selector": "^5.4"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "9.5",
+    "squizlabs/php_codesniffer": "^3.6",
+    "phan/phan": "^5.3"
+  },
+  "scripts": {
+    "test": "phpunit tests\\TestBuscadorDeCursos.php",
+    "cs": "phpcs --standard=PSR12 src/",
+    "phan": "phan --allow-polyfill-parser",
+    "check": [
+      "@phan",
+      "@cs",
+      "@test"
+    ],
+    "post-update-cmd": [
+      "@check"
+    ]
+  },
+  "scripts-descriptions": {
+    "check": "Roda as verificacoes do codigo. PHAN,PHPCS,PHPUNIT"
+  }
+}
